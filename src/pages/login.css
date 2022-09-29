@@ -5,9 +5,3 @@ p {
   justify-content: center;
   background-color: rgb(251, 251, 251);
 }
-
-#btnLogIn {
-  height: 50px;
-  margin-left: 680px;
-  background-color: rgb(251, 251, 251);
-}

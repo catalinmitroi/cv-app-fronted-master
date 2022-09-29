@@ -20,7 +20,7 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div align="center">
       <p>Informatii diverse...</p>
       <Button variant="outlined" onClick={handleClickOpen} id="btnLogIn">
         Open login form

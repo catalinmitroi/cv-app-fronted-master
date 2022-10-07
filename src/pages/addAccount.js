@@ -38,7 +38,7 @@ const defaultValues = {
   favoriteNumber: 0,
 };
 
-const AddRecommendation = () => {
+const AddAccount = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenUserMenu = (event) => {
@@ -154,8 +154,8 @@ const AddRecommendation = () => {
       <div>
         <Container maxWidth="sm" fixed>
           <Box sx={{ bgcolor: "#cfe8fc" }}>
+            <br />
             <form onSubmit={handleSubmit}>
-              <FormLabel>Recommendation Form</FormLabel>
               <Grid
                 container
                 alignItems="center"
@@ -163,72 +163,78 @@ const AddRecommendation = () => {
                 direction="column"
               >
                 <Grid item>
-                  <InputLabel>Name:</InputLabel>
                   <TextField
                     id="name-input"
-                    name="name"
+                    name="prenume"
+                    label="First Name: "
                     type="text"
-                    value={formValues.name}
+                    value={formValues.prenume}
                     onChange={handleInputChange}
+                    required
                   />
                 </Grid>
                 <br />
                 <Grid item>
-                  <InputLabel>Date:</InputLabel>
                   <TextField
-                    id="date-input"
-                    name="date"
-                    type="date"
-                    value={formValues.date}
+                    id="name-input"
+                    name="nume"
+                    label="Last name: "
+                    type="text"
+                    value={formValues.nume}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </Grid>
+                <br />
+                <Grid item>
+                  <TextField
+                    id="username"
+                    name="username"
+                    label="Username: "
+                    type="text"
+                    value={formValues.username}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </Grid>
+                <br />
+                <Grid item>
+                  <TextField
+                    id="email"
+                    name="email"
+                    label="Email"
+                    type="email"
+                    value={formValues.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </Grid>
+                <br />
+                <Grid item>
+                  <TextField
+                    id="password"
+                    required
+                    label="Password: "
+                    name="password"
+                    type="password"
+                    value={formValues.username}
                     onChange={handleInputChange}
                   />
                 </Grid>
                 <br />
                 <Grid item>
-                  <Card sx={{ maxWidth: 400 }}>
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Lizard
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles,
-                        with over 6,000 species, ranging across all continents
-                        except Antarctica
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button size="small">Share</Button>
-                      <Button size="small">Learn More</Button>
-                    </CardActions>
-                  </Card>
+                  <TextField
+                    id="address"
+                    label="Address: "
+                    name="address"
+                    type="text"
+                    value={formValues.username}
+                    onChange={handleInputChange}
+                  />
                 </Grid>
-                <br />
-                <Grid item>
-                  <Card sx={{ maxWidth: 400 }}>
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Q2
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles,
-                        with over 6,000 species, ranging across all continents
-                        except Antarctica
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Button size="small">Share</Button>
-                      <Button size="small">Learn More</Button>
-                    </CardActions>
-                  </Card>
-                </Grid>
-                <br />
-                <Button variant="contained" component="label">
-                  Upload CV
-                  <input hidden accept=".pdf" multiple type="file" />
-                </Button>
                 <br />
                 <Button variant="contained" color="primary" type="submit">
-                  Submit
+                  Create
                 </Button>
               </Grid>
               <br />
@@ -258,4 +264,4 @@ const AddRecommendation = () => {
     </div>
   );
 };
-export default AddRecommendation;
+export default AddAccount;
